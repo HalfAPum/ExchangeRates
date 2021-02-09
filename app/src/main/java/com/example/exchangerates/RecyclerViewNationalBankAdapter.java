@@ -42,7 +42,6 @@ public class RecyclerViewNationalBankAdapter extends RecyclerView.Adapter<Recycl
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewNationalBankAdapter.ViewHolder holder, int position) {
-        Log.d("myLogs", position + " " + lastCheckedItem);
         if(position == lastCheckedItem) {
             holder.itemView.setBackgroundColor(holder.itemView.getResources().getColor(R.color.colorHighlighted));
         } else if(position % 2 == 0) {
@@ -128,7 +127,6 @@ public class RecyclerViewNationalBankAdapter extends RecyclerView.Adapter<Recycl
         }
 
         public void setChecked(int position) {
-            Log.d("myLogs", position + "");
             setLastCheckedItem(position);
             itemView.setBackgroundColor(itemView.getResources().getColor(R.color.colorHighlighted));
         }
