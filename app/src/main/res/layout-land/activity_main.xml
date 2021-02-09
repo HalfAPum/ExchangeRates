@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/privatBankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="@string/pb"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/privatBankCalendarImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/privatBankDate"
+        android:contentDescription="@string/calendarImage"
+        android:onClick="privatBankCalendarClick"
+        android:src="@drawable/ic_calendar_48dp" />
+
+    <TextView
+        android:id="@+id/privatBankDate"
+        style="@style/dateTextStyle"
+        android:onClick="privatBankCalendarClick" />
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/privatBankCalendarImg"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_alignParentStart="true"
+            android:text="@string/currency" />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_centerHorizontal="true"
+            android:text="@string/buy" />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_alignParentEnd="true"
+            android:text="@string/sell" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/privatBankExchangeRates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/nationalBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/nbu"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/nationalBankCalendarImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/nationalBankDate"
+            android:contentDescription="@string/calendarImage"
+            android:onClick="nationalBankCalendarClick"
+            android:src="@drawable/ic_calendar_48dp" />
+
+        <TextView
+            android:id="@+id/nationalBankDate"
+            android:onClick="nationalBankCalendarClick"
+            style="@style/dateTextStyle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nationalBankExchangeRates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nationalBankCalendarImg"
+            android:layout_centerHorizontal="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+
+</LinearLayout>

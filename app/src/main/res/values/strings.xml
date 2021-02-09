@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Курсы валют</string>
+    <string name="pb">ПриватБанк</string>
+    <string name="nbu">НБУ</string>
+    <string name="currency">Валюта</string>
+    <string name="buy">Покупка</string>
+    <string name="sell">Продажа</string>
+    <string name="calendarImage">Calendar Image</string>
+</resources>
